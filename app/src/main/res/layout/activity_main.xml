@@ -9,8 +9,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.github.abdalimran.contactdb.MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/contactName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter contact name"
+        android:layout_margin="5dp"
+        android:padding="5dp"/>
+
+    <EditText
+        android:id="@+id/contactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter phone no"
+        android:layout_below="@+id/contactName"
+        android:layout_margin="5dp"
+        android:padding="5dp"/>
+
+    <Button
+        android:id="@+id/saveContact"
+        android:onClick="saveContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Save"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_below="@id/contactPhone"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/showAllContact"
+        android:onClick="showAllContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Contacts"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/saveContact"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>

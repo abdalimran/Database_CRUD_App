@@ -73,8 +73,9 @@ public class ContactDBOperations {
     }
 
     public ArrayList<Contact>getAllContact(){
+        this.open();
         ArrayList<Contact>allcontacts=new ArrayList<>();
-        Cursor cursor=db.rawQuery("select * from "+DatabaseHelper.TABLE_NAME +";",null);
+        Cursor cursor=db.rawQuery("select * from "+DatabaseHelper.TABLE_NAME,null);
 
         if(cursor!=null && cursor.getCount()>0){
             cursor.moveToFirst();

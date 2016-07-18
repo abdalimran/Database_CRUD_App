@@ -12,6 +12,11 @@ public class Contact {
         this.phoneNo = phoneNo;
     }
 
+    public Contact(String name, String phoneNo) {
+        this.name = name;
+        this.phoneNo = phoneNo;
+    }
+
     public int getId() {
         return id;
     }
@@ -35,5 +40,10 @@ public class Contact {
 
     public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: "+this.name+"\nPhone No: "+this.phoneNo;
     }
 }
